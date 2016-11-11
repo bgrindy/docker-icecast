@@ -11,6 +11,9 @@ may need to prevent UFW bypass
 # /etc/defaults/docker
 DOCKER_OPTS="--iptables=false"
 
+# restart docker
+sudo service docker restart
+
 # add ufw rule
 sudo ufw allow from 192.168.20.0/24 to any port 8000
 ```
